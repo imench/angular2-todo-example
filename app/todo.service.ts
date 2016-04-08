@@ -18,6 +18,13 @@ export class TodoService {
     TODOS.push(todo);
   }
 
+  UpdateTodo(todo:Todo) {
+    for (let i = 0; i < TODOS.length; i++) {
+      if (TODOS[i].id == todo.id)
+        TODOS[i] = todo;
+    }
+  }
+
   deleteTodo(todo:Todo) {
     TODOS.splice(TODOS.indexOf(todo), 1);
   }
