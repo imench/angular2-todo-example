@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {TodosComponent} from './todos.component';
 import {ViewTodoComponent} from './view-todo.component';
+import {FormTodoComponent} from './form-todo.component';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
 @Component({
@@ -20,6 +21,11 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
     path: '/view/:id',
     name: 'ViewTodo',
     component: ViewTodoComponent
+  },
+  {
+    path: '/update/:id',
+    name: 'UpdateTodo',
+    component: FormTodoComponent
   }
 ])
 export class AppComponent {

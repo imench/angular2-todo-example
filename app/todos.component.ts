@@ -24,6 +24,10 @@ export class TodosComponent implements OnInit {
     this._router.navigate(['ViewTodo', {id: todo.id}]);
   }
 
+  gotoUpdate(todo) {
+    this._router.navigate(['UpdateTodo', {id: todo.id}]);
+  }
+
   ngOnInit() {
     this.getTodos();
   }
