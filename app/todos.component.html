@@ -1,5 +1,8 @@
 <ul class="todos">
-  <li *ngFor="#todo of todos">
-    <span class="badge">{{todo.id}}</span> {{todo.name}}
-  </li>
+  <div *ngFor="#todo of todos">
+    <li>
+      <span class="badge">{{todo.id}}</span> {{todo.name}}
+    </li>
+    <button (click)="gotoView(todo)">View</button>
+  </div>
 </ul>

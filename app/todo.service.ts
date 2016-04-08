@@ -6,6 +6,10 @@ export class TodoService {
   getTodos() {
     return TODOS;
   }
+
+  getTodo(id:number) {
+    return TODOS.filter(todo => todo.id === id)[0];
+  }
 }
 
 var TODOS:Todo[] = [
