@@ -26,6 +26,11 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
     path: '/update/:id',
     name: 'UpdateTodo',
     component: FormTodoComponent
+  },
+  {
+    path: '/create',
+    name: 'AddTodo',
+    component: FormTodoComponent
   }
 ])
 export class AppComponent {

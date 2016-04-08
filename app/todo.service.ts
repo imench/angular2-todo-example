@@ -11,6 +11,13 @@ export class TodoService {
     return TODOS.filter(todo => todo.id === id)[0];
   }
 
+  addTodo(todo:Todo) {
+    todo.id = TODOS.map(td => td.id).sort(function (a, b) {
+        return b - a
+      })[0] + 1;
+    TODOS.push(todo);
+  }
+
   deleteTodo(todo:Todo) {
     TODOS.splice(TODOS.indexOf(todo), 1);
   }

@@ -20,10 +20,17 @@ export class FormTodoComponent implements OnInit {
 
   ngOnInit() {
     let id = +this._routeParams.get('id');
-    this.todo = this._todoService.getTodo(id);
+    if (id)
+      this.todo = this._todoService.getTodo(id);
+    else
+      this.todo = new Todo();
   }
 
   goBack() {
     window.history.back();
+  }
+
+  saveTodo(todo) {
+    this._todoService.addTodo(todo);
   }
 }
