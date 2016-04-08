@@ -10,6 +10,10 @@ export class TodoService {
   getTodo(id:number) {
     return TODOS.filter(todo => todo.id === id)[0];
   }
+
+  deleteTodo(todo:Todo) {
+    TODOS.splice(TODOS.indexOf(todo), 1);
+  }
 }
 
 var TODOS:Todo[] = [

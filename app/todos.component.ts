@@ -27,4 +27,8 @@ export class TodosComponent implements OnInit {
   ngOnInit() {
     this.getTodos();
   }
+
+  deleteTodo(todo) {
+    this._todoService.deleteTodo(todo);
+  }
 }
